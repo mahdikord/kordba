@@ -1,5 +1,5 @@
 # telebot
-Telegram Bot starter kit. Very easy to install with Google App Engine.
+Telegram Bot starter kit.
 
 Instructions
 ============
@@ -54,7 +54,7 @@ Instructions
 
 16. Wait until you see a long text with `"ok": true` and your bot's name. This could take a minute or so, please reload if it does not succeed.
 
-27. Now, go to https://`project-id`.appspot.com/set_webhook?url=https://`project-id`.appspot.com/webhook (replace both `project-id`s with the Project ID you set on step 16).
+27. Now, go to https://path-to-bot/set_webhook?url=https://path-to-bot/webhook ((replace path-to-bot with the URL of where your bot is installed)).
 
 28. You should see `Webhook was set`.
 

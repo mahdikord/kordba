@@ -6,7 +6,9 @@ import webapp2
 import configuration
 
 
-TOKEN = 'YOUR_BOT_TOKEN_HERE'
+TOKEN = 'YOUR_TOKEN'
+
+MY_URL = "https://YOUR_BOT_URL"
 
 BASE_URL = 'https://api.telegram.org/bot' + TOKEN + '/'
 
@@ -15,7 +17,7 @@ BASE_URL = 'https://api.telegram.org/bot' + TOKEN + '/'
 # config.save()
 
 
-config = configuration("telebot.json")
+config = configuration.Configuration("telebot.json")
 
 
 def set_enabled(chat_id, yes):
@@ -112,3 +114,18 @@ app = webapp2.WSGIApplication([
     ('/set_webhook', SetWebhookHandler),
     ('/webhook', WebhookHandler),
 ], debug=True)
+
+def set_webhook():
+    url = MY_URL + "/webhook/"
+    if url:
+        print(BASE_URL + 'setWebhook', urllib.urlencode({'url': url}))
+        urllib2.urlopen(BASE_URL + 'setWebhook', urllib.urlencode({'url': url}))
+
+def main():
+    from paste import httpserver
+    set_webhook()
+    httpserver.serve(app, host='0.0.0.0', port='8080')
+
+
+if __name__ == '__main__':
+    main()
