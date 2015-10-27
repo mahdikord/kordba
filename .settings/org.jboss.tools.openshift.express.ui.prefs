@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.ApplicationId=562c3d620c1e66db81000164
+org.jboss.tools.openshift.ApplicationName=grouphelper
+org.jboss.tools.openshift.Connection=https\://devmwheeler%40live.com@openshift.redhat.com
+org.jboss.tools.openshift.Domain=rondoozle
+org.jboss.tools.openshift.RemoteName=origin
