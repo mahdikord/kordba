@@ -6,7 +6,7 @@ import webapp2
 import configuration
 
 
-TOKEN = 'YOUR_TOKEN'
+TOKEN = '189770008:AAE8lOLf4XaZ5OZkSd9bcpUdrl9PPDZ5eD8'
 
 MY_URL = "https://YOUR_BOT_URL"
 
